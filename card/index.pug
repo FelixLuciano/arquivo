@@ -1,0 +1,40 @@
+<!DOCKTYPE Public HTML>
+html
+    head
+
+        title Template-1
+
+        meta( name="viewport" content="width=device-width, initial-scale=1" )
+
+        link( rel="stylesheet" type="text/css" href="style.css" )
+
+        script( type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" )
+        script( type="text/javascript" src="script.js" )
+
+        //BOOTSTRAP
+        link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" )
+        link( rel="stylesheet" href="https://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" )
+        script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" )
+
+        //Plugins
+        link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" )
+
+    body
+
+        #bg
+
+        #cards( class="col-xs-12 col-xl-6 row-fluid" )
+            mixin card
+                .card( class="content col-xs-4 col-md-3" )
+                    .imagem images/card-background.jpg
+                    .titulo Título | rgba( 255, 255, 255, .9 )
+                    .texto Texto | rgba( 0, 0, 0, .5 ) | #FFF
+            .row-fuid
+                +card
+                +card
+                +card
+                +card
+                +card
+                +card
+                +card
+                +card

@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto:400");
+* {
+  font-family: "Roboto", sans-serif;
+  cursor: default; }
+
+#video-background {
+  width: 100%;
+  height: 250px;
+  overflow: hidden; }
+  #video-background .video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; }
+
+#header {
+  width: 100%;
+  height: 250px;
+  background: rgba(0, 250, 200, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  z-index: 1; }
+  #header #main-logo {
+    height: 70px;
+    margin-top: 35px;
+    background: url("images/logo.png") no-repeat center;
+    background-size: auto 100%; }
+  #header #messageSlider {
+    width: 100%;
+    position: absolute; }
+    #header #messageSlider #text {
+      margin-top: 20px;
+      color: #ffffff;
+      position: absolute;
+      left: 7%;
+      font-family: "Roboto", sans-serif; }
+      #header #messageSlider #text h1 {
+        -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        -o-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        display: inline-block; }
+      #header #messageSlider #text h4 {
+        margin: -10px 0 0 15px;
+        -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        -o-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        display: inline-block; }
+    #header #messageSlider #indexes {
+      width: auto;
+      height: 10px;
+      margin-top: 120px;
+      position: absolute;
+      right: 20px; }
+      #header #messageSlider #indexes div {
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+        background: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        float: left;
+        cursor: pointer;
+        overflow: hidden; }
+        #header #messageSlider #indexes div .image, #header #messageSlider #indexes div .title, #header #messageSlider #indexes div .text {
+          visibility: hidden; }
+        #header #messageSlider #indexes div::before {
+          content: "";
+          margin: 1px;
+          padding: 6px 6px 0 0;
+          background: #fff;
+          border-radius: 50%;
+          position: absolute;
+          opacity: 0;
+          -webkit-transition: cubic-bezier(0, 0, 0, 1) 0.5s;
+          -moz-transition: cubic-bezier(0, 0, 0, 1) 0.5s;
+          -o-transition: cubic-bezier(0, 0, 0, 1) 0.5s;
+          transition: cubic-bezier(0, 0, 0, 1) 0.5s; }
+          #header #messageSlider #indexes div::before:hover {
+            opacity: 0.4; }
+        #header #messageSlider #indexes div.selected::before {
+          opacity: 0.6; }
+
+#shop {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  #shop.cards-mode {
+    padding: 50px 10%;
+    background: #e2e2e2; }
+  #shop.purchase-mode {
+    padding: 0px 10%;
+    background: #78909C; }
+  #shop #cards {
+    margin: 0 auto;
+    padding: 0;
+    float: inherit; }
+    #shop #cards .card {
+      width: calc( 100% / 3 );
+      background: no-repeat center;
+      background-size: auto 90%;
+      color: white;
+      -webkit-box-shadow: 1 1 3 rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 1 1 3 rgba(0, 0, 0, 0.5);
+      -o-box-shadow: 1 1 3 rgba(0, 0, 0, 0.5);
+      box-shadow: 1 1 3 rgba(0, 0, 0, 0.5);
+      -webkit-transition: 0.5s transform cubic-bezier(0, 0, 0, 1);
+      -moz-transition: 0.5s transform cubic-bezier(0, 0, 0, 1);
+      -o-transition: 0.5s transform cubic-bezier(0, 0, 0, 1);
+      transition: 0.5s transform cubic-bezier(0, 0, 0, 1);
+      position: relative;
+      display: inline-block; }
+      #shop #cards .card .title {
+        max-width: 100%;
+        padding: 10px 15px;
+        -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        -o-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        font-size: 170%;
+        -webkit-transition: 0.3s ease-out;
+        -moz-transition: 0.3s ease-out;
+        -o-transition: 0.3s ease-out;
+        transition: 0.3s ease-out;
+        position: absolute; }
+      #shop #cards .card .text {
+        padding: 10px 20px;
+        font-size: 170%;
+        text-align: right;
+        -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        -o-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        -webkit-transition: 0.5s padding cubic-bezier(0, 0, 0, 1);
+        -moz-transition: 0.5s padding cubic-bezier(0, 0, 0, 1);
+        -o-transition: 0.5s padding cubic-bezier(0, 0, 0, 1);
+        transition: 0.5s padding cubic-bezier(0, 0, 0, 1);
+        cursor: pointer; }
+      #shop #cards .card .text ~ div {
+        display: none; }
+      #shop #cards .card:hover {
+        -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+        -o-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 1;
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); }
+        #shop #cards .card:hover .title {
+          width: auto;
+          padding: 5px 10px;
+          background: #fff;
+          color: #333;
+          -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          -o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          -webkit-text-shadow: none;
+          -moz-text-shadow: none;
+          -o-text-shadow: none;
+          text-shadow: none;
+          -webkit-transform: translate(-10px, 10px);
+          -moz-transform: translate(-10px, 10px);
+          -ms-transform: translate(-10px, 10px);
+          -o-transform: translate(-10px, 10px);
+          transform: translate(-10px, 10px);
+          cursor: pointer; }
+  #shop #purchaseScreen {
+    width: 80%;
+    min-width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    display: none; }
+    #shop #purchaseScreen .left {
+      width: 40%;
+      height: 100%;
+      background: #ffffff;
+      -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      float: left;
+      position: relative; }
+      #shop #purchaseScreen .left .header {
+        width: calc( 100% + 20px );
+        height: 100px;
+        margin: 20px 0 0 -10px;
+        background: no-repeat center;
+        -webkit-background-size: auto 100%;
+        background-size: auto 100%;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        position: relative; }
+        #shop #purchaseScreen .left .header #purchase-cancel {
+          width: 40px;
+          height: 40px;
+          padding: 10px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          opacity: 0.6;
+          -webkit-transition: 0.5s cubic-bezier(0, 0, 0, 1);
+          -moz-transition: 0.5s cubic-bezier(0, 0, 0, 1);
+          -o-transition: 0.5s cubic-bezier(0, 0, 0, 1);
+          transition: 0.5s cubic-bezier(0, 0, 0, 1); }
+          #shop #purchaseScreen .left .header #purchase-cancel .icon {
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            -webkit-clip-path: polygon(8% 0, 0 8%, 40% 50%, 0 92%, 8% 100%, 50% 57%, 92% 100%, 100% 92%, 60% 50%, 100% 8%, 92% 0, 50% 40%);
+            -moz-clip-path: polygon(8% 0, 0 8%, 40% 50%, 0 92%, 8% 100%, 50% 57%, 92% 100%, 100% 92%, 60% 50%, 100% 8%, 92% 0, 50% 40%);
+            -ms-clip-path: polygon(8% 0, 0 8%, 40% 50%, 0 92%, 8% 100%, 50% 57%, 92% 100%, 100% 92%, 60% 50%, 100% 8%, 92% 0, 50% 40%);
+            -o-clip-path: polygon(8% 0, 0 8%, 40% 50%, 0 92%, 8% 100%, 50% 57%, 92% 100%, 100% 92%, 60% 50%, 100% 8%, 92% 0, 50% 40%);
+            clip-path: polygon(8% 0, 0 8%, 40% 50%, 0 92%, 8% 100%, 50% 57%, 92% 100%, 100% 92%, 60% 50%, 100% 8%, 92% 0, 50% 40%);
+            -webkit-transition: 0.3s cubic-bezier(0, 0, 0, 1);
+            -moz-transition: 0.3s cubic-bezier(0, 0, 0, 1);
+            -o-transition: 0.3s cubic-bezier(0, 0, 0, 1);
+            transition: 0.3s cubic-bezier(0, 0, 0, 1);
+            cursor: pointer; }
+          #shop #purchaseScreen .left .header #purchase-cancel:hover {
+            background: #009688;
+            opacity: 1;
+            -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            transform: scale(1.3);
+            cursor: pointer; }
+          #shop #purchaseScreen .left .header #purchase-cancel:hover .icon {
+            -webkit-clip-path: polygon(43% 7%, 35% 0, 0 50%, 35% 100%, 43% 93%, 15% 55%, 100% 55%, 100% 45%, 15% 50%, 100% 55%, 100% 45%, 15% 45%);
+            -moz-clip-path: polygon(43% 7%, 35% 0, 0 50%, 35% 100%, 43% 93%, 15% 55%, 100% 55%, 100% 45%, 15% 50%, 100% 55%, 100% 45%, 15% 45%);
+            -ms-clip-path: polygon(43% 7%, 35% 0, 0 50%, 35% 100%, 43% 93%, 15% 55%, 100% 55%, 100% 45%, 15% 50%, 100% 55%, 100% 45%, 15% 45%);
+            -o-clip-path: polygon(43% 7%, 35% 0, 0 50%, 35% 100%, 43% 93%, 15% 55%, 100% 55%, 100% 45%, 15% 50%, 100% 55%, 100% 45%, 15% 45%);
+            clip-path: polygon(43% 7%, 35% 0, 0 50%, 35% 100%, 43% 93%, 15% 55%, 100% 55%, 100% 45%, 15% 50%, 100% 55%, 100% 45%, 15% 45%); }
+      #shop #purchaseScreen .left .info {
+        margin: 10px 0 50px 0;
+        padding: 10px 15px;
+        font-size: 150%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        #shop #purchaseScreen .left .info div {
+          overflow: visible;
+          display: inline-block; }
+        #shop #purchaseScreen .left .info .name {
+          width: 70%; }
+        #shop #purchaseScreen .left .info .price {
+          width: 25%;
+          text-align: right;
+          position: relative;
+          float: right; }
+      #shop #purchaseScreen .left .payment {
+        margin-top: 20px; }
+        #shop #purchaseScreen .left .payment .paymentService {
+          width: calc( 50% - 31px );
+          height: 40px;
+          padding: 10px 0;
+          text-align: center;
+          font-size: 16px;
+          display: inline-block;
+          -webkit-transition: 0.3s ease-out;
+          -moz-transition: 0.3s ease-out;
+          -o-transition: 0.3s ease-out;
+          transition: 0.3s ease-out; }
+        #shop #purchaseScreen .left .payment #pagseguro {
+          background: url("images/pagseguro.png") no-repeat center;
+          border-left: 4px solid transparent;
+          -webkit-transition: 0.3s;
+          -moz-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+          #shop #purchaseScreen .left .payment #pagseguro.selected {
+            border-left: 4px solid #8BC34A; }
+        #shop #purchaseScreen .left .payment #moip {
+          background: url("images/moip.png") no-repeat center;
+          border-right: 4px solid transparent;
+          float: right; }
+          #shop #purchaseScreen .left .payment #moip.selected {
+            border-right: 4px solid #174d7d; }
+        #shop #purchaseScreen .left .payment #payService-switcher {
+          margin-top: 10px;
+          margin-right: 20px;
+          position: absolute;
+          display: inline; }
+          #shop #purchaseScreen .left .payment #payService-switcher .mSwitch-thumb {
+            background: url("images/arrow.png") no-repeat center #fff; }
+          #shop #purchaseScreen .left .payment #payService-switcher .mSwitch:checked + label .mSwitch-thumb {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg); }
+          #shop #purchaseScreen .left .payment #payService-switcher .mSwitch + label .mSwitch-checkedTrack {
+            background: #8BC34A; }
+          #shop #purchaseScreen .left .payment #payService-switcher .mSwitch:checked + label .mSwitch-checkedTrack {
+            background: #174d7d; }
+      #shop #purchaseScreen .left .terms {
+        margin-top: 50px;
+        text-align: center; }
+        #shop #purchaseScreen .left .terms #checkTerms {
+          margin-right: 5px;
+          cursor: pointer; }
+        #shop #purchaseScreen .left .terms .link {
+          margin: 0 3px;
+          color: #a02525;
+          -webkit-transition: 0.3s;
+          -moz-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s;
+          display: inline; }
+          #shop #purchaseScreen .left .terms .link:hover {
+            color: #E53935;
+            text-decoration: underline;
+            cursor: pointer; }
+      #shop #purchaseScreen .left #purchase-buy {
+        width: 150px;
+        margin: 50px auto;
+        padding: 10px 0;
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        -webkit-transition: 0.3s cubic-bezier(0, 0, 0, 1);
+        -moz-transition: 0.3s cubic-bezier(0, 0, 0, 1);
+        -o-transition: 0.3s cubic-bezier(0, 0, 0, 1);
+        transition: 0.3s cubic-bezier(0, 0, 0, 1); }
+        #shop #purchaseScreen .left #purchase-buy.buy-notAllowed {
+          background: #E53935;
+          opacity: 0.3;
+          cursor: not-allowed; }
+        #shop #purchaseScreen .left #purchase-buy.buy-Allowed {
+          background: #8BC34A;
+          opacity: 1;
+          -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          cursor: pointer; }
+          #shop #purchaseScreen .left #purchase-buy.buy-Allowed:hover {
+            background: #7CB342;
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+            cursor: pointer; }
+    #shop #purchaseScreen .right {
+      width: calc( 60% - 5px );
+      height: 95%;
+      margin: 1.5% 0;
+      padding: 30px 5%;
+      background: #ececec;
+      border-right: 5px solid transparent;
+      -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      text-align: justify;
+      overflow: hidden;
+      float: left; }
+      #shop #purchaseScreen .right:hover {
+        padding: 30px calc( 5% - 17px ) 30px 5%;
+        overflow-y: auto; }
+
+#footer {
+  padding: 20px 7%;
+  background: #333;
+  -webkit-box-shadow: 0 -2px 7px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 -2px 7px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 -2px 7px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -2px 7px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+  position: relative; }
+  #footer img {
+    height: 50px; }
+  #footer .message {
+    margin: 10px 0 0 30px; }
+  #footer .social {
+    float: right;
+    position: relative; }
+    #footer .social .icon {
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      -webkit-transition: 0.2s cubic-bezier(0, 0, 0, 1);
+      -moz-transition: 0.2s cubic-bezier(0, 0, 0, 1);
+      -o-transition: 0.2s cubic-bezier(0, 0, 0, 1);
+      transition: 0.2s cubic-bezier(0, 0, 0, 1);
+      float: left; }
+      #footer .social .icon::after {
+        content: "";
+        position: absolute; }
+      #footer .social .icon:hover {
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        transform: scale(1.15);
+        -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+        -o-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+        cursor: pointer; }
+    #footer .social #facebook {
+      background: #374f8a; }
+      #footer .social #facebook::after {
+        margin: 10px 11px;
+        padding: 10px;
+        background: url("images/social-icons.png") no-repeat 0 0; }
+    #footer .social #twitter {
+      background: #00bef6; }
+      #footer .social #twitter::after {
+        margin: 10px;
+        padding: 20px 23px 0 0;
+        background: url("images/social-icons.png") no-repeat -21px 0; }
+    #footer .social #youtube {
+      background: #E62117; }
+      #footer .social #youtube::after {
+        margin: 10px 7px;
+        padding: 20px 25px 0 0;
+        background: url("images/social-icons.png") no-repeat -45px 0; }
+
+.mSwitch {
+  visibility: hidden; }
+
+.mSwitch + label {
+  width: 60px;
+  height: 20px;
+  margin-left: -11px;
+  background: #CFD8DC;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  border-radius: 999px;
+  position: relative;
+  -webkit-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1) inset;
+  -o-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1) inset;
+  cursor: pointer; }
+  .mSwitch + label .mSwitch-thumb {
+    width: 26px;
+    height: 130%;
+    margin: -5%;
+    background: #FFF;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-transition: cubic-bezier(0.2, 0.5, 0, 1) 0.3s;
+    -moz-transition: cubic-bezier(0.2, 0.5, 0, 1) 0.3s;
+    -o-transition: cubic-bezier(0.2, 0.5, 0, 1) 0.3s;
+    transition: cubic-bezier(0.2, 0.5, 0, 1) 0.3s;
+    position: absolute;
+    cursor: pointer; }
+  .mSwitch + label .mSwitch-checkedTrack {
+    width: 100%;
+    height: 20px;
+    background: #174d7d;
+    opacity: 0.8;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+    border-radius: 999px;
+    -webkit-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1) inset;
+    -o-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1) inset;
+    -webkit-transition: cubic-bezier(0.2, 0.5, 0, 1) 0.3s;
+    -moz-transition: cubic-bezier(0.2, 0.5, 0, 1) 0.3s;
+    -o-transition: cubic-bezier(0.2, 0.5, 0, 1) 0.3s;
+    transition: cubic-bezier(0.2, 0.5, 0, 1) 0.3s;
+    position: absolute;
+    cursor: pointer; }
+
+.mSwitch:checked + label .mSwitch-thumb {
+  margin-left: calc( 100% - 23px );
+  -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3); }
+.mSwitch:checked + label .mSwitch-checkedTrack {
+  background: #8bc34a; }
+
+/*# sourceMappingURL=style.css.map */

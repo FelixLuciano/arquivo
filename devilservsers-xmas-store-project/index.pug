@@ -1,0 +1,92 @@
+<!DOCKTYPE Public HTML>
+html
+    head
+
+        title Template-1
+
+        meta( name="viewport" content="width=device-width, initial-scale=1" )
+
+        link( rel="stylesheet" type="text/css" href="style.css" )
+
+        script( type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" )
+        script( type="text/javascript" src="script.js" )
+
+        //BOOTSTRAP
+        link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" )
+        link( rel="stylesheet" href="https://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" )
+        script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" )
+
+        //Plugins
+        link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" )
+
+    body
+
+        #video-background
+            video( class="video" autoplay loop )
+                source( src="images/header-background vídeo.mp4" type="video/mp4" )
+        #header( class="content" )
+            #main-logo
+            #messageSlider( class="content" )
+
+                #text( animated="fadeInLeft .5 .5" )
+                    h1
+                    br
+                    h4
+
+                #indexes
+                    div
+                        .title Feliz Natal!
+                        .text A DevilServers está fazendo uma promoção imperdível nesse final de ano, confira!
+                    div
+                        .title Natal na DevilServers
+                        .text Confira nos servidores zonas tematizadas com presentes que podem ser abertos no dia 26/12!
+
+        #shop( class="cards-mode content" )
+            #cards( class="content col-md-9 row-fluid")
+                .card( animated="fadeIn .3 .5" shop="comboDP" )
+                    .fundo images/comboDP.png | #62b365
+                    .titulo Combo DevilPlay
+                    .texto R$ 15
+
+                .card( animated="fadeIn 0 .5" shop="comboDG" )
+                    .fundo images/comboDG.png | #b36262
+                    .titulo Combo DevilGames 2
+                    .texto R$ 15
+
+                .card( animated="fadeIn .6 .5" shop="comboDJ" )
+                    .fundo images/comboDJ.png | #b362b0
+                    .titulo Combo DevilJail
+                    .texto R$ 15
+
+            #purchaseScreen( animated="slideInUp 0 .5" )
+                .left
+                    .header
+                        #purchase-cancel
+                            .icon
+                    .info
+                        .name
+                        .price
+                    .payment
+                        #pagseguro( class="paymentService selected" )
+                        #payService-switcher
+                        #moip( class="paymentService" )
+                    .terms
+                        input( type="checkbox" id="checkTerms" )
+                        ="Li e concordo com os"
+                        .link( openLink="http://devilsvs.net/termos/ | _blank | width=600px, height=600px" ) Termos de uso
+                    #purchase-buy( class="buy-notAllowed" ) Comprar
+
+                .right
+
+        #footer( class="content" )
+            img( src="images/logo.png" )
+
+            .social
+                #facebook( class="icon" openLink="http://facebook.com/devilsvs" )
+                #twitter( class="icon" openLink="http://twitter.com/Devilsvs" )
+                #youtube( class="icon" openLink="https://www.youtube.com/channel/UCi0oK92_quUQHViZ37m5yHQ" )
+
+            .message
+                ="DevilSerers - Especial de natal"
+                br
+                ="Todos os direitos reservados."

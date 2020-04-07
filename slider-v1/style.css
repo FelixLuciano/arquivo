@@ -1,0 +1,72 @@
+html{
+ box-shadow:0px 0px 50px rgba(0,0,0,0.5) inset;
+}
+
+body{
+ margin:0px;
+ padding:0px;
+ background:#333;
+ color:#fff;
+ font-size:20px;
+ font-family:verdana;
+ transition:3s;
+ -webkit-transition:3s;
+}
+
+.box{
+ width:400px;
+ height:420px;
+ background:#fff;
+ border-radius:0px 10px;
+ transition:3s;
+ -webkit-transition:3s;
+ position:fixed;
+ box-shadow:0px 0px 10px rgba(0,0,0,0.5) inset;
+}
+
+#boxb{
+ background:#f44;
+}
+
+#boxc{
+ background:#09f;
+}
+
+#title{
+ margin-top:40px;
+ color:#09f;
+ font-size:30px;
+ text-align:center;
+ transition:3s;
+ -webkit-transition:3s;
+}
+
+.range{
+ width:300px;
+ height:10px;
+ margin:30px auto 0px auto;
+ padding-top:10px;
+}
+
+.rangeBar{
+ width:300px;
+ height:10px;
+ background:rgba(0,0,0,0.1);
+ padding-right:8px;
+ cursor: w-resize;
+ box-shadow:0px 0px 5px rgba(0,0,0,0.5) inset;
+}
+
+.ajuster{
+ width:10px;
+ height:10px;
+ transition:background 3s;
+ -webkit-transition:background 3s;
+ cursor: w-resize;
+}
+
+.text{
+ width:200px;
+ margin:20px auto;
+ text-align:center;
+}

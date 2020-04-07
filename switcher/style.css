@@ -1,0 +1,71 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #3F51B5;
+  cursor: default;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+#content {
+  width: 350px;
+  padding: 1px;
+  background: #EEE;
+  text-align: center;
+  position: fixed;
+  left: calc( 50% - 175px );
+  top: calc( 50% - 42px );
+}
+
+.mSwitch-content {
+  margin: 15px auto;
+}
+
+.mSwitch + label {
+  width: 60px;
+  height: 20px;
+  margin: 0px 0px 0px -40px;
+  background: #CFD8DC;
+  border-radius: 999px;
+  position: absolute;
+  box-shadow: 0px -1px 3px rgba( 0, 0, 0, .1 ) inset;
+}
+
+.mSwitch + label .mSwitch-thumb {
+  width: 26px;
+  height: 130%;
+  margin: -5%;
+  background: #FFF;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba( 0, 0, 0, .3 );
+  transition: cubic-bezier(0.2, 0.5, 0, 1) .3s;
+  -webkit-transition: cubic-bezier(0.2, 0.5, 0, 1) .3s;
+  position: absolute;
+}
+
+.mSwitch:checked + label .mSwitch-thumb {
+  margin-left: calc( 100% - 23px );
+}
+
+.mSwitch + label .mSwitch-checkedTrack {
+  width: 20px;
+  height: 20px;
+  background: #388E3C;
+  opacity: .4;
+  border-radius: 999px;
+  box-shadow: 0px -1px 3px rgba( 0, 0, 0, .1 ) inset;
+  transition: cubic-bezier(0.2, 0.5, 0, 1) .3s;
+  -webkit-transition: cubic-bezier(0.2, 0.5, 0, 1) .3s;
+  position: absolute;
+}
+
+.mSwitch:checked + label .mSwitch-checkedTrack {
+  width: 100%;
+}
+
+.mSwitch:checked + label .mSwitch-thumb {
+  background: #4CAF50;
+}

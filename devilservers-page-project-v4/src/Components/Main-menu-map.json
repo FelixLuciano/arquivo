@@ -1,0 +1,36 @@
+{
+  "left": [
+    {
+      "name": "Home",
+      "link": "#link1"
+    }, {
+      "name": "Features",
+      "link": "#link2",
+      "submenu": [
+        {
+          "name": "Subitem 1",
+          "link": "#sublink1"
+        }, {
+          "name": "Subitem 1",
+          "link": "#sublink1"
+        }
+      ]
+    }, {
+      "name": "Stuffs",
+      "link": "#link3"
+    }, {
+      "name": "Developers",
+      "link": "#link4"
+    }
+  ],
+
+  "right": [
+    {
+      "name": "Sign In",
+      "link": "#link1"
+    }, {
+      "name": "Sign Out",
+      "link": "#link2"
+    }
+  ]
+}

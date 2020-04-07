@@ -1,0 +1,35 @@
+html{
+ box-shadow:0px 0px 50px rgba( 0, 0, 0, 0.5 ) inset;
+}
+
+body{
+ margin:0px;
+ padding:0px;
+ background:#333;
+ color:#fff;
+ font-size:20px;
+ font-family:verdana;
+ transition:3s;
+ -webkit-transition:3s;
+}
+
+#logo{
+ width:636px;
+ height:80px;
+ background:url("imgs/logo.png") no-repeat center;
+ position:fixed;
+}
+
+.line{
+ width:700px;
+ height:2px;
+ background:#fff;
+ position:fixed;
+}
+
+.lineB{
+ width:100px;
+ height:3px;
+ background:#f44;
+ position:fixed;
+}

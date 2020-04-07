@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400|Sansita')
+@import "../functions"
+
+body
+  margin: 0
+  padding: 0
+  background: #e5e5e5 !important
+  font-family: 'Roboto', sans-serif !important
+  font-size: 100%
+
+::-webkit-scrollbar
+  width: 7px
+  margin-left: 100%
+
+::-webkit-scrollbar-thumb
+  background: #fff
+  border-radius: 15px
+
+::-webkit-scrollbar-track
+  background: #4b4b4b
+
+#header
+  width: 100%
+  height: 100%
+  +background( url("images/header-background.jpg") no-repeat center, cover )
+  overflow: hidden
+
+  #mainMenu
+    width: 100%
+    padding: 0 15%
+    border-bottom: 1px solid rgba( 255, 255, 255, .2 )
+    position: absolute
+    z-index: 1
+
+    &.scroll
+      padding: 0 10%
+      background: rgba( 0, 0, 0, .2 )
+      position: fixed
+      top: 0
+
+      #logo
+        display: inline-block
+
+    #logo
+      height: 30px
+      margin: -8px 10px 0 -50px
+      display: none
+
+    .menuItem
+      margin: 0 10px
+      padding: 0 4px
+      color: #ccbd90
+      text-align: center
+      font-size: 1.3em
+      line-height: 60px
+      font-family: 'Sansita', sans-serif !important
+      +t-shadow( 2px 2px 1px rgba( 0, 0, 0, .5 ) )
+      display: inline-block
+
+      &:hover
+        cursor: pointer
+
+      &.right
+        float: right
+
+  #menuItem-hover
+    width: 60px
+    height: 60px
+    border: 1px solid rgba( 255, 255, 255, .3 )
+    position: absolute
+    top: 0
+    opacity: 0
+    visibility: hidden
+    +shadow( 0 0 10px rgba( 255, 255, 255, .2 ) )
+    +transform( rotate( 45deg ) scale( .9 ) )
+    +transition( .3s )
+
+    &.visible
+      opacity: 1
+      visibility: visible
+      +transform( rotate( 45deg ) scale( 1 ) )
+
+  #content
+    width: 100%
+    height: calc( 100% - 61px )
+    position: absolute
+    top: 61px
+    z-index: 1
+
+    #logo
+      height: 60px
+      margin: 7% 0 0 50%
+      +transform( translate( -50%, 0 ) )
+
+    .navigator
+      width: 7%
+      height: 50px
+      border-top: 2px solid rgba( 204, 168, 61, .5 )
+      border-bottom: 2px solid rgba( 204, 168, 61, .5 )
+      +transform( translate( 0%, -50% ) )
+      position: absolute
+      left: 0
+      top: 50%
+
+      &::before
+        content: ""
+        margin: -8px 0 0 85%
+        padding: 30px
+        border: 2px solid rgba( 204, 168, 61, .5 )
+        +shadow( 0 0 10px rgba( 0, 0, 0, .2 ) )
+        +transform( rotate( 45deg ) )
+        +transition( .3s )
+        position: absolute
+
+      &::after
+        content: ""
+        margin: 3px 0 0 98%
+        padding: 20px
+        +background( url("images/arrow.png") no-repeat center, auto 80% )
+        opacity: .6
+        position: absolute
+
+      &:hover
+        &::before
+          +shadow( 0 0 10px rgba( 255, 255, 255, .4 ) )
+          cursor: pointer
+        &::after
+          cursor: pointer
+
+    #right.navigator
+      left: inherit
+      right: 0
+
+      &::before
+        margin-left: -53%
+
+      &::after
+        margin-left: -42%
+        +transform( rotate( 180deg ) )
+
+  .header-adornment
+    height: 200%
+    border-right: 2px solid rgba( 204, 168, 61, .4 )
+    border-left: 2px solid rgba( 204, 168, 61, .4 )
+    +shadow( 0 0 10px rgba( 0, 0, 0, .2 ) )
+    +transform( translate( -50%, 0 ) )
+    +radius( 50% )
+    position: relative
+    left: 50%
+    top: -50%
+
+    &.layer2
+      height: 195%
+      border-width: 4px
+      +transform( translate( -50%, -101% ) )
+
+#fake
+  height: 500px
+
+#footer
+  padding: 20px 7%
+  background: #333
+  +shadow( 0 -2px 7px rgba( 0, 0, 0, .5 ) )
+  color: rgba( 255, 255, 255, .9 )
+  position: relative
+
+  img
+    height: 50px
+
+  .message
+    margin: 10px 0 0 30px
+
+  .social
+    float: right
+    position: relative
+
+    .icon
+      width: 40px
+      height: 40px
+      margin-left: 10px
+      +transition( .2s cubic-bezier( 0, 0, 0, 1 ) )
+      float: left
+
+      &::after
+        content: ""
+        position: absolute
+
+      &:hover
+        +transform( scale( 1.15 ) )
+        cursor: pointer
+
+    #facebook
+      background: #374f8a
+
+      &::after
+        margin: 10px 11px
+        padding: 10px
+        background: url('images/social-icons.png') no-repeat 0 0
+
+    #twitter
+      background: #00bef6
+
+      &::after
+        margin: 10px
+        padding: 20px 23px 0 0
+        background: url('images/social-icons.png') no-repeat -21px 0
+
+    #youtube
+      background: #E62117
+
+      &::after
+        margin: 10px 7px
+        padding: 20px 25px 0 0
+        background: url('images/social-icons.png') no-repeat -45px 0

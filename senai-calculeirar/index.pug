@@ -1,0 +1,61 @@
+<!DOCKTYPE Public HTML>
+html
+    head
+
+        title SENAI Calcureirar
+
+        meta( name="viewport" content="width=device-width, initial-scale=1" )
+
+        link( rel="stylesheet" type="text/css" href="style.css" )
+
+        script( type="text/javascript" src="jquery.min.js" )
+        script( type="text/javascript" src="script.js" )
+
+        //BOOTSTRAP
+        link( rel="stylesheet" href="bootstrap.min.css" )
+        link( rel="stylesheet" href="bootstrap-responsive.css" )
+        script( type="text/javascript" src="bootstrap.min.js" )
+
+    body
+
+        #mainContent.createMode
+            #createMode
+                #header
+                    input#nome( type="text" floatPlaceholder="Comodo" )
+                    input#largura( type="text" floatPlaceholder="Largura" )
+                    input#comprimento( type="text" floatPlaceholder="Comprimento" )
+                    .actionButton
+                        .icon
+                #table
+                    #tableHeader.tableLine
+                        .tableCell.col-xs-3 C&ocirc;modo
+                        .tableCell.col-xs-2 &Aacute;rea
+                        .tableCell.col-xs-2 Perímetro
+                        .tableCell.col-xs-2 TUG's
+                        .tableCell.col-xs-2 Ilumina&ccedil;&atilde;o
+                    .tableLine
+                        .tableCell.col-xs-12( class="empty" ) Nenhum item para mostrar
+            #editMode
+                textarea#textFile( spellcheck="false" autofocus )
+                .actionButton
+                    .icon
+
+        #mainMenu.col-xs-12
+            img( src="images/SENAI logo.png" )
+            #tabMenuOpen
+                .icon
+                    div
+                    div
+                    div
+                .dropMenu
+                    a#save( href="#" download="Projeto.txt" )
+                        div Salvar
+                    input#load( type="file" accept=".txt" style="display: none;" )
+                    label( for="load" )
+                        div Abrir
+                    #edit Editar
+        #mainContent-bg
+
+        #credits
+            p Por Luciano Felix Dias
+            p 2016 - 2&#186; Termo de Eletroeletr&ocirc;nica

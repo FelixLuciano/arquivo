@@ -1,0 +1,425 @@
+@import "../functions.sass"
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto:400')
+
+*
+  font-family: 'Roboto', sans-serif
+  cursor: default
+
+#video-background
+  width: 100%
+  height: 250px
+  overflow: hidden
+  .video
+    width: 100%
+    height: 250px
+    object-fit: cover
+
+#header
+  width: 100%
+  height: 250px
+  background: rgba( 0, 250, 200, 0.1 )
+  border-bottom: 1px solid rgba( 0, 0, 0, .3 )
+  +shadow( 0 3px 5px rgba( 0, 0, 0, .4 ) )
+  position: absolute
+  top: 0
+  z-index: 1
+
+  #main-logo
+    height: 70px
+    margin-top: 35px
+    +background( url("images/logo.png") no-repeat center, auto 100% )
+
+  #messageSlider
+    width: 100%
+    position: absolute
+
+    #text
+      margin-top: 20px
+      color: #ffffff
+      position: absolute
+      left: 7%
+      font-family: 'Roboto', sans-serif
+
+      h1
+        +t-shadow( 1px 1px 5px rgba( 0, 0, 0, .6 ) )
+        display: inline-block
+      h4
+        margin: -10px 0 0 15px
+        +t-shadow( 1px 1px 5px rgba( 0, 0, 0, .6 ) )
+        display: inline-block
+
+    #indexes
+      width: auto
+      height: 10px
+      margin-top: 120px
+      position: absolute
+      right: 20px
+
+      div
+        width: 10px
+        height: 10px
+        margin-left: 5px
+        background: rgba( 255, 255, 255, .3 )
+        border: 1px solid rgba( 255, 255, 255, .3 )
+        border-radius: 50%
+        float: left
+        cursor: pointer
+        overflow: hidden
+
+        .image, .title, .text
+          visibility: hidden
+
+        &::before
+          content: ""
+          margin: 1px
+          padding: 6px 6px 0 0
+          background: #fff
+          border-radius: 50%
+          position: absolute
+          opacity: 0
+          +transition( cubic-bezier( 0, 0, 0, 1 ) .5s )
+
+          &:hover
+            opacity: .4
+
+        &.selected::before
+          opacity: .6
+
+#shop
+  +transition( .5s )
+
+  &.cards-mode
+    padding: 50px 10%
+    background: #e2e2e2
+
+  &.purchase-mode
+    padding: 0px 10%
+    background: #78909C
+
+  #cards
+    margin: 0 auto
+    padding: 0
+    float: inherit
+
+    .card
+      width: calc( 100% / 3 )
+      background: no-repeat center
+      background-size: auto 90%
+      color: rgba( 255, 255, 255, 9 )
+      +shadow( 1 1 3 rgba( 0, 0, 0, .5 ) )
+      +transition( .5s transform cubic-bezier( 0, 0, 0, 1 ) )
+      position: relative
+      display: inline-block
+
+      .title
+        max-width: 100%
+        padding: 10px 15px
+        +t-shadow( 1px 1px 2px rgba( 0, 0, 0, .6 ) )
+        font-size: 170%
+        +transition( .3s ease-out )
+        position: absolute
+
+      .text
+        padding: 10px 20px
+        font-size: 170%
+        text-align: right
+        +t-shadow( 1px 1px 2px rgba( 0, 0, 0, .6 ) )
+        +transition( .5s padding cubic-bezier( 0, 0, 0, 1 ) )
+        cursor: pointer
+
+      .text ~ div
+        display: none
+
+      &:hover
+        +shadow( 0 0 10px 3px rgba( 0, 0, 0, .3 ) )
+        cursor: pointer
+        z-index: 1
+        +transform( scale( 1.1 ) )
+
+        .title
+          width: auto
+          padding: 5px 10px
+          background: #fff
+          color: #333
+          +shadow( 2px 2px 4px rgba( 0, 0, 0, .4 ) )
+          +t-shadow( none )
+          +transform( translate( -10px, 10px ) )
+          cursor: pointer
+
+  #purchaseScreen
+    width: 80%
+    min-width: 700px
+    height: 500px
+    margin: 0 auto
+    display: none
+
+    .left
+      width: 40%
+      height: 100%
+      background: #ffffff
+      +shadow( 1px 1px 3px rgba( 0, 0, 0, .4 ) )
+      float: left
+      position: relative
+
+      .header
+        width: calc( 100% + 20px )
+        height: 100px
+        margin: 20px 0 0 -10px
+        background: no-repeat center
+        -webkit-background-size: auto 100%
+        background-size: auto 100%
+        +shadow( 1px 1px 2px rgba( 0, 0, 0, .4 ) )
+        position: relative
+
+        #purchase-cancel
+          width: 40px
+          height: 40px
+          padding: 10px
+          +radius( 50% )
+          opacity: .6
+          +transition( .5s cubic-bezier( 0, 0, 0, 1 ) )
+
+          .icon
+            width: 20px
+            height: 20px
+            background: #fff
+            +clip( polygon(8% 0, 0 8%, 40% 50%, 0 92%, 8% 100%, 50% 57%, 92% 100%, 100% 92%, 60% 50%, 100% 8%, 92% 0, 50% 40%) )
+            +transition( .3s cubic-bezier( 0, 0, 0, 1) )
+            cursor: pointer
+
+          &:hover
+            background: #009688
+            opacity: 1
+            +shadow( 1px 1px 2px rgba( 0, 0, 0, .2 ) )
+            +transform( scale( 1.3 ) )
+            cursor: pointer
+
+          &:hover .icon
+            +clip( polygon(43% 7%, 35% 0, 0 50%, 35% 100%, 43% 93%, 15% 55%, 100% 55%, 100% 45%, 15% 50%, 100% 55%, 100% 45%, 15% 45%) )
+
+
+      .info
+        margin: 10px 0 50px 0
+        padding: 10px 15px
+        font-size: 150%
+        border-bottom: 1px solid rgba( 0, 0, 0, .1 )
+
+        div
+          overflow: visible
+          display: inline-block
+
+        .name
+          width: 70%
+
+        .price
+          width: 25%
+          text-align: right
+          position: relative
+          float: right
+
+      .payment
+        margin-top: 20px
+
+        .paymentService
+          width: calc( 50% - 31px )
+          height: 40px
+          padding: 10px 0
+          text-align: center
+          font-size: 16px
+          display: inline-block
+          +transition( .3s ease-out )
+
+        #pagseguro
+          background: url("images/pagseguro.png") no-repeat center
+          border-left: 4px solid transparent
+          +transition( .3s )
+
+          &.selected
+            border-left: 4px solid #8BC34A
+
+        #moip
+          background: url("images/moip.png") no-repeat center
+          border-right: 4px solid transparent
+          float: right
+
+          &.selected
+            border-right: 4px solid #174d7d
+
+        #payService-switcher
+          margin-top: 10px
+          margin-right: 20px
+          position: absolute
+          display: inline
+
+          .mSwitch-thumb
+            background: url("images/arrow.png") no-repeat center #fff
+
+          .mSwitch:checked + label .mSwitch-thumb
+            +transform( rotate( 180deg ) )
+
+          .mSwitch + label .mSwitch-checkedTrack
+            background: #8BC34A
+
+          .mSwitch:checked + label .mSwitch-checkedTrack
+            background: #174d7d
+
+      .terms
+        margin-top: 50px
+        text-align: center
+
+        #checkTerms
+          margin-right: 5px
+          cursor: pointer
+
+        .link
+          margin: 0 3px
+          color: #a02525
+          +transition( .3s )
+          display: inline
+
+          &:hover
+            color: #E53935
+            text-decoration: underline
+            cursor: pointer
+
+      #purchase-buy
+        width: 150px
+        margin: 50px auto
+        padding: 10px 0
+        color: #ffffff
+        font-size: 16px
+        text-align: center
+        +transition( .3s cubic-bezier( 0, 0, 0, 1) )
+
+        &.buy-notAllowed
+          background: #E53935
+          opacity: .3
+          cursor: not-allowed
+
+        &.buy-Allowed
+          background: #8BC34A
+          opacity: 1
+          +shadow( 0 0 20px rgba( 0, 0, 0, .3 ) )
+          cursor: pointer
+
+          &:hover
+            background: #7CB342
+            +transform( scale( 1.1 ) )
+            cursor: pointer
+
+
+    .right
+      width: calc( 60% - 5px )
+      height: 95%
+      margin: 1.5% 0
+      padding: 30px 5%
+      background: #ececec
+      border-right: 5px solid transparent
+      +shadow( 1px 1px 3px rgba( 0, 0, 0, .4 ) )
+      text-align: justify
+      overflow: hidden
+      float: left
+
+      &:hover
+        padding: 30px calc( 5% - 17px ) 30px 5%
+        overflow-y: auto
+
+#footer
+  padding: 20px 7%
+  background: #333
+  +shadow( 0 -2px 7px rgba( 0, 0, 0, .5 ) )
+  color: rgba( 255, 255, 255, .9 )
+  position: relative
+
+  img
+    height: 50px
+
+  .message
+    margin: 10px 0 0 30px
+
+  .social
+    float: right
+    position: relative
+
+    .icon
+      width: 40px
+      height: 40px
+      margin-left: 10px
+      +transition( .2s cubic-bezier( 0, 0, 0, 1 ) )
+      float: left
+
+      &::after
+        content: ""
+        position: absolute
+
+      &:hover
+        +transform( scale( 1.15 ) )
+        +shadow( 0 0 10px 3px rgba( 0, 0, 0, .3 ) )
+        cursor: pointer
+
+    #facebook
+      background: #374f8a
+
+      &::after
+        margin: 10px 11px
+        padding: 10px
+        background: url('images/social-icons.png') no-repeat 0 0
+
+    #twitter
+      background: #00bef6
+
+      &::after
+        margin: 10px
+        padding: 20px 23px 0 0
+        background: url('images/social-icons.png') no-repeat -21px 0
+
+    #youtube
+      background: #E62117
+
+      &::after
+        margin: 10px 7px
+        padding: 20px 25px 0 0
+        background: url('images/social-icons.png') no-repeat -45px 0
+
+.mSwitch
+  visibility: hidden
+
+.mSwitch + label
+  width: 60px
+  height: 20px
+  margin-left: -11px
+  background: #CFD8DC
+  +radius( 999px )
+  position: relative
+  +shadow( 0px -1px 3px rgba( 0, 0, 0, .1 ) inset )
+  cursor: pointer
+
+  .mSwitch-thumb
+    width: 26px
+    height: 130%
+    margin: -5%
+    background: #FFF
+    +radius( 50% )
+    +shadow( 1px 1px 3px rgba( 0, 0, 0, .3 ) )
+    +transition( cubic-bezier(0.2, 0.5, 0, 1) .3s )
+    position: absolute
+    cursor: pointer
+
+  .mSwitch-checkedTrack
+    width: 100%
+    height: 20px
+    background: #174d7d
+    opacity: .8
+    +radius( 999px )
+    +shadow( 0px -1px 3px rgba( 0, 0, 0, .1 ) inset )
+    +transition( cubic-bezier(0.2, 0.5, 0, 1) .3s )
+    position: absolute
+    cursor: pointer
+
+.mSwitch:checked + label
+  .mSwitch-thumb
+    margin-left: calc( 100% - 23px )
+    +shadow( -1px -1px 3px rgba( 0, 0, 0, .3 ) )
+
+  .mSwitch-checkedTrack
+    background: #8bc34a

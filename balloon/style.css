@@ -1,0 +1,60 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #d32f2f;
+  cursor: default;
+  font-family: Verdana;
+}
+
+#buttons{
+  width: 700px;
+  position: fixed;
+  left: calc( 50% - 350px );
+  top: calc( 50% - 16px );
+}
+
+.button {
+  width: 200px;
+  padding: 5px 0px;
+  background: #EDEDED;
+  text-align: center;
+  color: #d32f2f;
+  border: 2px solid #d32f2f;
+  outline: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  box-shadow: 0px 0px 20px rgba( 0, 0, 0, .5 );
+}
+
+.button:hover {
+  background: rgba( 75, 0, 0, .35 );
+  color: #EDEDED;
+  box-shadow: 0px 0px 20px #000;
+}
+
+.balon {
+  padding: 5px 20px;
+  background: #EDEDED;
+  box-shadow: 0px 0px 5px rgba( 0, 0, 0, .5 );
+  color: #d32f2f;
+  font-size: 13px;
+  position: fixed;
+  display: none;
+}
+
+.balon img{
+  max-width: 200px;
+}
+
+.balon::after {
+  content: "";
+  padding-top: 10px;
+  padding-left: 10px;
+  background: #EDEDED;
+  position: absolute;
+  transform: rotate(45deg);
+  margin-left: calc( 50% - 20px );
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}

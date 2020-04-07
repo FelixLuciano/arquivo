@@ -1,0 +1,28 @@
+@import "../functions.sass"
+
+body
+  margin: 0
+  padding: 0
+  background: #ECEFF1
+
+#warzone
+  background: url("images/grid.png") #F5F5F5
+  border: 5px solid #F44336
+  +centralize( absolute )
+
+  div
+    display: inline-block
+
+  .obstacle
+    width: 50px
+    height: 50px
+    background: rgba( 0, 0, 0, .2 )
+    position: absolute
+
+  #player
+    width: 50px
+    height: 50px
+    background: #FFEB3B
+    +shadow( 2px 2px 4px rgba( 0, 0, 0, .2 ) )
+    position: absolute
+    +transition( .3s cubic-bezier( 0, 0, 0, .5 ) )

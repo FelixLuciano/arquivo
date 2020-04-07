@@ -1,0 +1,29 @@
+=shadow ( $attributes... )
+  -webkit-box-shadow: $attributes
+  -moz-box-shadow: $attributes
+  -o-box-shadow: $attributes
+  box-shadow: $attributes
+
+=t-shadow ( $attributes... )
+  -webkit-text-shadow: $attributes
+  -moz-text-shadow: $attributes
+  -o-text-shadow: $attributes
+  text-shadow: $attributes
+
+=background( $basic-attributes, $size )
+  background: $basic-attributes
+  background-size: $size
+
+=linearGradient( $top, $bottom )
+  background: $top
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom))
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%)
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%)
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%)
+
+=transition( $attributes... )
+  -webkit-transition: $attributes
+  -moz-transition: $attributes
+  -o-transition: $attributes
+  transition: $attributes

@@ -1,0 +1,68 @@
+@font-face {
+ font-family: MB-Demonic_Tale;
+ src: url("../../MB-Demonic_Tale.ttf");
+}
+
+.header {
+  width: calc( 100% - 60px );
+  height: 120px;
+  margin: -10px -10px 0px -10px;
+  padding: 20px 40px;
+  background: no-repeat;
+  background-size: cover;
+  background-position: 50% 10%;
+  box-shadow: 0px 2px 3px rgba( 0, 0, 0, .6 ),  0px -10px 10px rgba( 0, 0, 0, .5 ) inset;
+}
+
+.header > .title {
+  color: #c00;
+  font-size: 40px;
+  text-shadow: 1px 1px 3px rgba( 0, 0, 0, .5 );
+  font-family: 'MB-Demonic_Tale', sans-serif;
+}
+
+.header + #menu {
+  width: calc( 100% - 20px);
+  margin: -31px -10px 0px -10px;
+  text-align: right;
+  font-family: 'Raleway', sans-serif;
+}
+
+#menu > .item {
+  width: 100px;
+  margin: 0px 20px;
+  padding: 5px 0px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 3px rgba( 0, 0, 0, .8 );
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: cubic-bezier( 0.2, 0.5, 0, 1 ) .5s;
+  -webkit-transition: cubic-bezier( 0.2, 0.5, 0, 1 ) .5s;
+} #menu > .item:hover {
+  border-bottom: 2px solid #FFF;
+}
+
+#menu > .home-button {
+  width: 30px;
+  margin: 5px 0px 0px 15px;
+  padding: 10px 11px 11px 10px;
+  background: #F44;
+  opacity: .7;
+  border-radius: 50px;
+  box-shadow: 1px 1px 3px rgba( 0, 0, 0, .4 );
+  transition: cubic-bezier( 0.2, 0.5, 0, 1 ) .5s;
+  -webkit-transition: cubic-bezier( 0.2, 0.5, 0, 1 ) .5s;
+  text-align: center;
+  cursor: pointer;
+} #menu > .home-button:hover {
+  opacity: 1;
+}
+
+#content {
+  width: calc( 100% + 20px );
+  height: 285px;
+  margin: 0px -10px -10px -10px;
+  padding-top: 25px;
+}

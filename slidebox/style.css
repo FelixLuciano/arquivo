@@ -1,0 +1,56 @@
+body {
+ margin:0px;
+ padding:0px;
+ background:#3d2d2d;
+ font-family:Arial;
+}
+
+#slidebox {
+ width:700px;
+ height:350px;
+ border-radius:3px;
+ transition: 0.5s;
+ -webkit-transition: 0.5s;
+ position:fixed;
+}
+
+.prev, .next {
+ width:100px;
+ height:100%;
+ cursor:pointer;
+ transition: 0.5s;
+ -webkit-transition: 0.5s;
+}
+
+.prev {
+ background:url(imgs/prev.png) no-repeat center;
+ float:left;
+}
+
+.prev:hover {
+ background:url(imgs/prev.png) no-repeat center left;
+ transition: 0.5s;
+ -webkit-transition: 0.5s;
+}
+
+.next {
+ background:url(imgs/next.png) no-repeat center;
+ float:right;
+}
+
+.next:hover {
+ background:url(imgs/next.png) no-repeat center right;
+ transition: 0.5s;
+ -webkit-transition: 0.5s;
+}
+
+.desc {
+ width:90%;
+ height:20px;
+ margin-top:-40px;
+ padding-left:10%;
+ color:#fff;
+ font-size:16px;
+ text-shadow:1px 1px 0px rgba(0,0,0,0.5);
+ float:left;
+}

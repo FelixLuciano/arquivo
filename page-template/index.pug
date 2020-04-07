@@ -1,0 +1,74 @@
+<!DOCKTYPE Public HTML>
+html
+    head
+
+        title Template-1
+
+        meta( name="viewport" content="width=device-width, initial-scale=1" )
+
+        link( rel="stylesheet" type="text/css" href="style.css" )
+
+        script( type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" )
+        script( type="text/javascript" src="script.js" )
+
+        //BOOTSTRAP
+        link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" )
+        link( rel="stylesheet" href="https://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" )
+        script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" )
+
+        //Plugins
+        link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" )
+
+    body()
+
+        #header( class="content-fluid" )
+            #mainMenu( class="row-fluid" animated="fadeInDown" )
+                    .content( class="col-xs-4 col-sm-2 col-md-2" animated="flipInY .6" )
+                        img( src="images/main-logo.png" id="main-logo" )
+
+                    .content( class="col-xs-4 col-sm-3" id="sufix" animated="fadeInUp .6 .5" )
+                        h1 Título
+                        p Subtítulo
+
+                    ul( class="col-xs-12 col-sm-7 nav navbar-nav hidden-xs" id="mainMenu-items" )
+                        li( animated="fadeInRight .6 .5" )
+                            a( href="# " ) Home
+                        li( animated="fadeInRight .6 .7" )
+                            a( href="#" ) Page 2
+                        li( animated="fadeInRight .6 .9" )
+                            a( href="#" ) Page 3
+
+                    .content( class="col-xs-4 col-sm-7" )
+                        #sandwich( class="hidden-sm hidden-md hidden-lg" )
+                            .sandwich-bar( animated="rotateIn .6 .6" )
+                            .sandwich-bar( animated="rotateIn .8 .6" )
+                            .sandwich-bar( animated="rotateIn 1 .6" )
+
+            #slideBox( class="content" )
+
+                #text( animated="fadeInLeft .5 .5" )
+                    h1
+                    br
+                    h4
+
+                #indexes
+                    div
+                        .image images/slideBox/image-1.jpg
+                        .title Imagem 1
+                        .text Mostrando: image-1.jpg
+                    div
+                        .image images/slideBox/image-2.jpg
+                        .title Imagem 2
+                        .text Mostrando: image-2.jpg
+                    div
+                        .image images/slideBox/image-3.jpg
+                        .title Imagem 3
+                        .text Mostrando: image-3.jpg
+                    div
+                        .image images/slideBox/image-4.jpg
+                        .title Imagem 4
+                        .text Mostrando: image-4.jpg
+                    div
+                        .image images/slideBox/image-5.jpg
+                        .title Imagem 5
+                        .text Mostrando: image-5.jpg

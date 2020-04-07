@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto:100|Bungee+Shade')
+
+@import "functions"
+
+#header
+  +background( #fff, cover )
+  height: 500px
+  +transition( 1s background, background-size 0s )
+
+  #mainMenu
+    height: 100px
+    padding: 0 5%
+    border-bottom: 1px solid rgba( 255, 255, 255, .7 )
+    color: white
+    +linearGradient( rgba( 0, 0, 0, .9 ), transparent )
+
+    .content
+      height: 100%
+
+      #main-logo
+        height: 75px
+        margin: 12px auto
+        image-rendering: pixelated
+
+    #sufix
+      h1
+        margin: 15px 0 5px 0
+        font-family: 'Lobster', sans-serif
+      p
+        margin: 0
+        font-family: "Roboto", sans-serif
+        font-size: 16px
+
+    .navbar-nav
+      height: 100px
+      li
+        float: right
+        a
+          padding: 40px 30px
+          color: #fff
+          font-size: 24px
+          +t-shadow( 1px 1px 3px rgba( 0, 0, 0, .7 ) )
+          font-family: "Roboto", sans-serif
+        a::before
+          content: ""
+          margin: -40px -30px
+          padding: 1px 50%
+          background: rgba( 0, 0, 0, 0 )
+          position: absolute
+          +transition( cubic-bezier( 0, 0, 0, 1 ) .5s )
+        a:hover::before
+          background: rgba( 255, 255, 255, .3 )
+          padding: 50px 50%
+        a:hover, a:active
+          background: none
+
+    #sandwich
+      width: 50px
+      height: 30px
+      margin: 40px 0
+      float: right
+      cursor: pointer
+
+      .sandwich-bar
+        width: 100%
+        height: 3px
+        margin-bottom: 10px
+        background: rgba( 255, 255, 255, .9 )
+
+  #slideBox
+    width: 100%
+    height: 400px
+    position: absolute
+
+    #text
+      margin-top: 170px
+      color: #ffffff
+      position: absolute
+      left: 7%
+      h1
+        background: rgba( 0, 0, 0, .3 )
+        +b-shadow( 0px 0px 5px 5px rgba( 0, 0, 0, .3 ) )
+        font-family: "Bungee Shade", serif
+        display: inline-block
+      h4
+        margin-left: 20px
+        background: rgba( 0, 0, 0, .3 )
+        +b-shadow( 0px 0px 5px 5px rgba( 0, 0, 0, .3 ) )
+        display: inline-block
+
+    #indexes
+      width: auto
+      height: 10px
+      margin-top: 375px
+      position: absolute
+      right: 20px
+
+      div
+        width: 10px
+        height: 10px
+        margin-left: 5px
+        background: rgba( 255, 255, 255, .3 )
+        border: 1px solid rgba( 255, 255, 255, .3 )
+        border-radius: 50%
+        float: left
+        cursor: pointer
+        overflow: hidden
+
+        .image, .title, .text
+          visibility: hidden
+
+      div::before
+        content: ""
+        margin: 1px
+        padding: 6px 6px 0 0
+        background: #fff
+        border-radius: 50%
+        position: absolute
+        opacity: 0
+        +transition( cubic-bezier( 0, 0, 0, 1 ) .5s )
+
+      div:hover::before
+        opacity: .4
+
+      div.selected::before
+        opacity: .6
+
+//BOOTSTRAP MD SIZE
+@media( max-width: 767px  )
+
+  #sufix
+    text-align: center

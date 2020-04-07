@@ -1,0 +1,58 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #474747;
+  cursor: default;
+  font-family: Verdana;
+}
+
+.triangle-1 {
+  width: 700px;
+  height: 400px;
+  background: #e84c3d;
+  transform: rotate( -45deg );
+  box-shadow: 0px 10px 10px rgba( 0, 0, 0, .3 );
+  position: fixed;
+  left: -270px;
+  top: -140px;
+  z-index: -1;
+}
+
+.retangle-1 {
+  width: 100px;
+  height: 650px;
+  background: #474747;
+  transform: rotate( -45deg );
+  border-right: 150px solid #595959;
+  border-left: 150px solid #595959;
+  box-shadow: 5px 0px 10px rgba( 0, 0, 0, .5 ), -5px 0px 10px rgba( 0, 0, 0, .5 ), 0px 0px 20px rgba( 0, 0, 0, .6 ) inset;
+  position: fixed;
+  left: calc( 50% - 400px );
+  top: -250px;
+  z-index: -1;
+}
+
+.retangle-2 {
+  width: 500px;
+  height: 1200px;
+  background: #3d3d3d;
+  transform: rotate( 45deg );
+  border-right: 15px solid #e84c3d;
+  box-shadow: 5px 5px 10px rgba( 0, 0, 0, .5 ), -5px -5px 10px rgba( 0, 0, 0, .5 );
+  position: fixed;
+  left: calc( 50% + 232px );
+  top: -400px;
+  z-index: -1;
+}
+
+.circle-1 {
+  width: 500px;
+  height: 500px;
+  background: #3d3d3d;
+  border-radius: 999px;
+  box-shadow: 5px 5px 10px rgba( 0, 0, 0, .5 ), -5px -5px 10px rgba( 0, 0, 0, .5 );
+  position: fixed;
+  left: -150px;
+  bottom: -150px;
+  z-index: -1;
+}

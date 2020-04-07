@@ -1,0 +1,35 @@
+@keyframes mainMenu-intro {
+  from {
+    margin-top: -50px;
+    opacity: 0;
+  } to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes explorer-intro {
+  from {
+    right: -800px;
+  } to {
+    right: 2%;
+  }
+}
+
+@keyframes socialMenu-intro {
+  from {
+    margin-left: -40px; 
+  } to {
+    margin-left: 0px;
+  }
+}
+
+@keyframes window-intro {
+  from {
+    opacity: .5;
+    transform: rotateX( -16deg );
+  } to {
+    opacity: 1;
+    transform: rotateX( 0deg );
+  }
+}
