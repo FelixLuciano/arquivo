@@ -4,7 +4,7 @@ This is the publication page for legacy code/pre-codepen files for small creatio
 
 - [Clock](https://felixluciano.github.io/arquivo/clock/index.htm) JUNE 12, 2016
 - [Slider v1](https://felixluciano.github.io/arquivo/slider-v1/index.htm) JUNE 29, 2016
-- [Devilserv](https://felixluciano.github.io/arquivo/devilservers-header-test/index.htm) JUNE 29, 2016
+- [Devilservers header test](https://felixluciano.github.io/arquivo/devilservers-header-test/index.htm) JUNE 29, 2016
 - [Slidebox](https://felixluciano.github.io/arquivo/slidebox/index.htm) JUNE 30, 2016
 - [Tablegen](https://felixluciano.github.io/arquivo/tablegen/index.htm) JULY 1, 2016
 - [Painting](https://felixluciano.github.io/arquivo/painting/index.htm) JULY 18, 2016
@@ -13,7 +13,7 @@ This is the publication page for legacy code/pre-codepen files for small creatio
 - [Balloon](https://felixluciano.github.io/arquivo/balloon/index.htm) OCTOBER 6, 2016
 - [Components](https://felixluciano.github.io/arquivo/components/index.htm) OCTOBER 7, 2016
 - [3D Box Rotate](https://felixluciano.github.io/arquivo/3d-box-rotate/index.htm) OCTOBER 9, 2016
-- [Mater](https://felixluciano.github.io/arquivo/material-background/index.htm) OCTOBER 9, 2016
+- [Material background](https://felixluciano.github.io/arquivo/material-background/index.htm) OCTOBER 9, 2016
 - [CSS Line](https://felixluciano.github.io/arquivo/css-line/index.htm) OCTOBER 14, 2016
 - [3D Card](https://felixluciano.github.io/arquivo/3d-card/index.htm) OCTOBER 22, 2016
 - [Material clicker](https://felixluciano.github.io/arquivo/material-clicker/index.htm) OCTOBER 22, 2016
