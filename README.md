@@ -9,7 +9,7 @@ This is the publication page for legacy code/pre-codepen files for small creatio
 - [Tablegen](https://felixluciano.github.io/arquivo/tablegen/index.html) JULY 1, 2016
 - [Painting](https://felixluciano.github.io/arquivo/painting/index.html) JULY 18, 2016
 - [Graphics v1](https://felixluciano.github.io/arquivo/graphics-v1/index.html) AUGUST 7, 2016
-- [Centralizer](https://felixluciano.github.io/arquivo/centralizer/index.html OCTOBER 6, 2016
+- [Centralizer](https://felixluciano.github.io/arquivo/centralizer/index.html) OCTOBER 6, 2016
 - [Balloon](https://felixluciano.github.io/arquivo/balloon/index.html) OCTOBER 6, 2016
 - [Components](https://felixluciano.github.io/arquivo/components/index.html) OCTOBER 7, 2016
 - [3D Box Rotate](https://felixluciano.github.io/arquivo/3d-box-rotate/index.html) OCTOBER 9, 2016
